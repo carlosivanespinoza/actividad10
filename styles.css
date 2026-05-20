@@ -12,10 +12,18 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background: #f2f2f2;
+}
+
+img {
+    max-width: 100%;
 }
 
 /* HEADER */
@@ -32,6 +40,10 @@ header {
 }
 
 .menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px 28px;
     text-align: center;
     padding-top: 35px;
 }
@@ -41,7 +53,6 @@ header {
     color: var(--blanco);
     text-decoration: none;
     font-size: 16px;
-    margin: 0 22px;
     padding-bottom: 8px;
     border-bottom: 2px solid transparent;
     transition: all .3s ease;
@@ -54,10 +65,11 @@ header {
 
 /* TEXTO HEADER */
 .container-text {
-    height: 78vh;
+    min-height: 78vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 60px 0;
 }
 
 .text {
@@ -71,13 +83,13 @@ header {
 
 .nombre {
     color: var(--blanco);
-    font-size: 48px;
+    font-size: clamp(34px, 5vw, 48px);
     margin-bottom: 8px;
 }
 
 .profesion {
     color: var(--blanco);
-    font-size: 22px;
+    font-size: clamp(18px, 3vw, 22px);
     margin-bottom: 28px;
 }
 
@@ -115,21 +127,21 @@ header {
 }
 
 .foto img {
-    width: 160px;
-    height: 160px;
+    width: min(160px, 45vw);
+    height: min(160px, 45vw);
     border-radius: 50%;
     border: 6px solid #ffffff;
     object-fit: cover;
 }
 
 .texto-acerca h2 {
-    font-size: 36px;
+    font-size: clamp(30px, 4vw, 36px);
     color: #c9a24b;
     margin-bottom: 20px;
 }
 
 .texto-acerca p {
-    font-size: 18px;
+    font-size: clamp(16px, 2vw, 18px);
     line-height: 1.8;
     color: #555;
 }
@@ -143,7 +155,7 @@ header {
 
 .titulo-seccion {
     text-align: center;
-    font-size: 36px;
+    font-size: clamp(30px, 4vw, 36px);
     color: var(--azul-oscuro);
     margin: 0 0 45px;
 }
@@ -379,25 +391,71 @@ header {
     border-color: var(--rojo);
 }
 
+/* TABLETA */
 @media (max-width: 900px) {
+    .container,
+    .contenedor,
+    .contenedor-acerca {
+        width: 92%;
+    }
+
+    .menu {
+        gap: 12px 20px;
+    }
+
+    .text {
+        max-width: 500px;
+        padding: 38px 26px;
+    }
+
+    .acerca-de,
+    .trabajos,
+    .habilidades,
+    .contacto {
+        padding: 75px 18px;
+    }
+
     .contenedor-trabajos,
     .contenedor-habilidades {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .imagen-trabajo {
+        height: 135px;
+    }
+
+    .formulario-contacto {
+        max-width: 560px;
+    }
 }
 
+/* TELEFONO MOVIL */
 @media (max-width: 600px) {
+    header {
+        min-height: auto;
+    }
+
+    .container {
+        width: 94%;
+    }
+
+    .menu {
+        gap: 10px 12px;
+        padding-top: 24px;
+    }
+
     .menu a {
-        margin: 0 8px 12px;
         font-size: 14px;
+        padding-bottom: 5px;
     }
 
-    .nombre {
-        font-size: 36px;
+    .container-text {
+        min-height: 70vh;
+        padding: 38px 0 70px;
     }
 
-    .profesion {
-        font-size: 18px;
+    .text {
+        padding: 32px 20px;
     }
 
     .contenedor-trabajos,
@@ -405,7 +463,69 @@ header {
         grid-template-columns: 1fr;
     }
 
+    .acerca-de,
+    .trabajos,
+    .habilidades,
+    .contacto {
+        padding: 62px 16px;
+    }
+
+    .foto {
+        margin-top: -60px;
+    }
+
+    .texto-acerca p,
+    .trabajo p,
+    .habilidad p {
+        line-height: 1.7;
+    }
+
+    .trabajo,
+    .habilidad {
+        padding: 26px 18px;
+    }
+
+    .imagen-trabajo {
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    .lenguajes-trabajo span {
+        font-size: 12px;
+        padding: 6px 9px;
+    }
+
     .formulario-contacto {
         padding: 25px 20px;
+    }
+
+    .formulario-contacto input,
+    .formulario-contacto textarea {
+        font-size: 14px;
+    }
+
+    .enlaces-redes {
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 260px;
+        margin: auto;
+    }
+
+    .enlaces-redes a {
+        justify-content: center;
+    }
+}
+
+/* TELEFONO PEQUENO */
+@media (max-width: 380px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .boton,
+    .formulario-contacto button {
+        width: 100%;
+        text-align: center;
     }
 }

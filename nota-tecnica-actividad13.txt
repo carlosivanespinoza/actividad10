@@ -1,0 +1,7 @@
+Nota tecnica - Actividad 13
+
+En esta actividad se adapto el portafolio personal para que se vea correctamente en diferentes tamanos de pantalla. Se ajusto el menu, la seccion de inicio, acerca de, trabajos, habilidades, contacto y redes sociales para que el contenido sea legible y mantenga buen orden visual.
+
+Se usaron media queries para escritorio, tableta, telefono movil y telefonos pequenos. Tambien se aplicaron grid, flexbox, imagenes fluidas y medidas relativas para que las tarjetas, textos, imagenes, formulario y botones se acomoden mejor segun el ancho de la pantalla.
+
+Con estos cambios el portafolio conserva el mismo diseno general, pero ahora puede revisarse de manera mas comoda desde computadora, tablet o celular.
