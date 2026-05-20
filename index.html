@@ -18,9 +18,9 @@
         <nav class="menu">
             <a href="#" class="active">Inicio</a>
             <a href="#section-about">Acerca de</a>
-            <a href="#">Trabajos</a>
-            <a href="#">Habilidades</a>
-            <a href="#">Contacto</a>
+            <a href="#trabajos">Trabajos</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#contacto">Contacto</a>
         </nav>
 
         <div class="container-text">
@@ -55,9 +55,112 @@
         </div>
     </section>
 
+    <section class="trabajos" id="trabajos">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">Trabajos</h2>
+            <div class="contenedor-trabajos">
+                <article class="trabajo">
+                    <img class="imagen-trabajo" src="img/car-agency.svg" alt="Ilustracion de agencia de carros">
+                    <div class="icono-trabajo">01</div>
+                    <h3>Agencia de carros electronica</h3>
+                    <p>Sitio web para mostrar autos, precios, modelos y datos principales de una agencia digital.</p>
+                    <div class="lenguajes-trabajo">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                </article>
+
+                <article class="trabajo">
+                    <img class="imagen-trabajo" src="img/sushi-sales.svg" alt="Ilustracion de sistema de ventas de sushi">
+                    <div class="icono-trabajo">02</div>
+                    <h3>Sistema de venta para sushi</h3>
+                    <p>Proyecto enfocado en registrar pedidos, productos, precios y ventas de un negocio de sushi.</p>
+                    <div class="lenguajes-trabajo">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                    </div>
+                </article>
+
+                <article class="trabajo">
+                    <img class="imagen-trabajo" src="img/restaurant-inventory.svg" alt="Ilustracion de inventario de restaurante">
+                    <div class="icono-trabajo">03</div>
+                    <h3>Sistema de inventario restaurante</h3>
+                    <p>Aplicacion para controlar ingredientes, existencias y movimientos del inventario de un restaurante.</p>
+                    <div class="lenguajes-trabajo">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="habilidades" id="habilidades">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">Habilidades</h2>
+            <div class="contenedor-habilidades">
+                <article class="habilidad">
+                    <img class="icono-habilidad" src="img/html5.svg" alt="Logo de HTML5">
+                    <span>HTML5</span>
+                    <p>Estructura semantica para paginas web.</p>
+                </article>
+
+                <article class="habilidad">
+                    <img class="icono-habilidad" src="img/css3.svg" alt="Logo de CSS3">
+                    <span>CSS3</span>
+                    <p>Estilos, colores, espaciado y diseno responsivo.</p>
+                </article>
+
+                <article class="habilidad">
+                    <img class="icono-habilidad" src="img/javascript.svg" alt="Logo de JavaScript">
+                    <span>JavaScript</span>
+                    <p>Interactividad basica y logica de programacion.</p>
+                </article>
+
+                <article class="habilidad">
+                    <img class="icono-habilidad" src="img/teamwork.svg" alt="Icono de trabajo en equipo">
+                    <span>Trabajo en equipo</span>
+                    <p>Comunicacion y organizacion para proyectos escolares.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="contacto" id="contacto">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">Contacto</h2>
+            <form class="formulario-contacto">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+
+                <label for="correo">Correo electronico</label>
+                <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com">
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje"></textarea>
+
+                <button type="submit">Enviar mensaje</button>
+            </form>
+        </div>
+    </section>
+
 </main>
 
-<footer></footer>
+<footer class="redes-sociales">
+    <h2>Redes sociales</h2>
+    <div class="enlaces-redes">
+        <a href="#" aria-label="GitHub"><img src="img/github.svg" alt=""> GitHub</a>
+        <a href="#" aria-label="LinkedIn"><img src="img/linkedin.svg" alt=""> LinkedIn</a>
+        <a href="#contacto" aria-label="Correo"><img src="img/email.svg" alt=""> Correo</a>
+    </div>
+</footer>
 
 </body>
 </html>
